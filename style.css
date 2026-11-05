@@ -1,0 +1,104 @@
+:root{--bg:#16181c;--panel:#1f2227;--line:#2e3238;--text:#f3f4f6;--muted:#a3a9b2;--red:#e11d2e;color-scheme:dark}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--bg);color:var(--text);font:400 17px/1.6 Barlow,system-ui,sans-serif;padding-bottom:60px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,.logo{font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-style:italic;font-weight:800;line-height:1.02}
+h2{font-size:clamp(2rem,5vw,3rem);margin-bottom:32px}
+h3{font-size:1.1rem;font-weight:600}
+p{color:var(--muted)}
+
+/* Шапка */
+.top{position:sticky;top:0;z-index:10;background:rgba(22,24,28,.94);border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
+.bar{display:flex;align-items:center;gap:24px;height:64px}
+.logo{font-size:1.9rem;text-decoration:none;margin-right:auto}
+nav{display:flex;gap:22px}
+nav a{text-decoration:none;color:var(--muted);font-weight:500}
+nav a:hover{color:var(--text)}
+
+/* Кнопки */
+.btn{display:inline-block;padding:12px 22px;border:2px solid transparent;font:600 1rem Barlow,sans-serif;text-decoration:none;cursor:pointer;color:#fff}
+.btn-red{background:var(--red)}
+.btn-red:hover{background:#c1121f}
+.btn-line{border-color:var(--text)}
+.btn-line:hover{background:var(--text);color:var(--bg)}
+.btn-dark{background:var(--bg)}
+
+/* Главный экран */
+.hero{position:relative;overflow:hidden;padding:96px 0 80px}
+.hero::after{content:"";position:absolute;top:0;right:-6%;bottom:0;width:36%;background:var(--red);clip-path:polygon(38% 0,100% 0,100% 100%,0 100%)}
+.hero .wrap{position:relative;z-index:1}
+.hero h1{font-size:clamp(2.8rem,8vw,5.6rem);max-width:11em;animation:slide .6s ease-out}
+.lead{font-size:1.2rem;max-width:34em;margin:24px 0 32px;color:var(--text)}
+.actions{display:flex;flex-wrap:wrap;gap:14px}
+.meta{margin-top:28px;font-size:.95rem}
+@keyframes slide{from{opacity:0;transform:translateX(-32px)}to{opacity:1;transform:none}}
+
+/* Секции */
+.sec{padding:72px 0}
+.alt{background:var(--panel)}
+
+/* Цены */
+.prices{list-style:none;padding:0;border-top:1px solid var(--line)}
+.prices li{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 0;border-bottom:1px solid var(--line)}
+.prices span{font:italic 800 1.7rem "Barlow Condensed",sans-serif;white-space:nowrap}
+
+/* Почему мы */
+.why{display:grid;grid-template-columns:repeat(2,1fr);gap:32px 48px}
+.why h3{margin-bottom:6px}
+
+/* Акция */
+.promo{background:var(--red);padding:36px 0}
+.promo .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px}
+.promo p{color:#fff;font:italic 800 clamp(1.4rem,3vw,2rem)/1.15 "Barlow Condensed",sans-serif;max-width:26em}
+
+/* Отзывы */
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+blockquote{border-left:4px solid var(--red);padding-left:18px}
+blockquote p{color:var(--text)}
+blockquote footer{margin-top:10px;color:var(--muted);font-size:.95rem}
+
+/* Контакты и форма */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.phone{font:italic 800 2rem "Barlow Condensed",sans-serif;text-decoration:none;color:var(--text)}
+.map{margin-top:24px;height:200px;background:var(--bg);border:1px solid var(--line);display:grid;place-items:center;color:var(--muted)}
+form{display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:500}
+input,textarea{width:100%;padding:12px;background:var(--bg);border:1px solid var(--line);color:var(--text);font:inherit}
+input:focus,textarea:focus{border-color:var(--red)}
+.hp{position:absolute;left:-9999px}
+#note{min-height:1.6em}
+.foot{padding:28px 0;border-top:1px solid var(--line);font-size:.9rem;color:var(--muted)}
+
+/* Кнопка звонка на телефоне */
+.callbar{display:none}
+
+@media (max-width:760px){
+  nav{display:none}
+  .hero{padding:64px 0 56px}
+  .hero::after{width:12%}
+  .hero .wrap{padding-right:14%}
+  .why,.reviews,.contact{grid-template-columns:1fr}
+  .contact{gap:40px}
+  .callbar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:20;padding:16px 16px calc(16px + env(safe-area-inset-bottom,0px));background:var(--red);color:#fff;text-align:center;font-weight:600;text-decoration:none}
+}
+@media (prefers-reduced-motion:reduce){.hero h1{animation:none}html{scroll-behavior:auto}}
+img,iframe{max-width:100%}
+
+/* Tablet */
+@media (min-width:761px) and (max-width:1024px){
+  nav{gap:16px}
+  .hero::after{width:30%}
+  .reviews{grid-template-columns:repeat(2,1fr)}
+  .reviews blockquote:last-child{grid-column:1/-1}
+  .contact{gap:32px}
+}
+
+/* Small phones */
+@media (max-width:760px){
+  .bar{gap:12px}
+  .bar .btn{padding:10px 14px;font-size:.95rem}
+  .prices span{font-size:1.4rem}
+}

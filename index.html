@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pitlane: auto repair shop</title>
+<meta name="description" content="Diagnostics, servicing, brakes and suspension. Fixed prices agreed before any work starts. Book by phone or online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="logo" href="#">Pitlane</a>
+    <nav aria-label="Sections">
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-red" href="tel:+000000000000">+000 000 000 000</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <h1>Fast repairs.<br>Fixed prices, agreed upfront.</h1>
+      <p class="lead">Diagnostics, servicing, brakes and suspension. We tell you what’s wrong and what it costs before we touch your car.</p>
+      <div class="actions">
+        <a class="btn btn-red" href="tel:+000000000000">Call us</a>
+        <a class="btn btn-line" href="#contact">Request a booking</a>
+      </div>
+      <p class="meta">Mon–Sat, 8:00–19:00. 12-month warranty on all work.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="services">
+    <div class="wrap">
+      <h2>Services and prices</h2>
+      <ul class="prices">
+        <li><div><h3>Computer diagnostics</h3><p>We read fault codes, check sensors and give you a written report.</p></div><span>from €25</span></li>
+        <li><div><h3>Oil and filter change</h3><p>Oil to manufacturer spec, filters included.</p></div><span>from €30</span></li>
+        <li><div><h3>Brakes</h3><p>Pads, discs, fluid and bleeding.</p></div><span>from €60</span></li>
+        <li><div><h3>Suspension and steering</h3><p>Shocks, arms, bushings and wheel alignment.</p></div><span>from €80</span></li>
+        <li><div><h3>Tyre fitting and balancing</h3><p>Seasonal swaps, puncture repair and storage.</p></div><span>from €40</span></li>
+        <li><div><h3>Air conditioning</h3><p>Check, regas and clean.</p></div><span>from €45</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec alt">
+    <div class="wrap">
+      <h2>Why drivers come back</h2>
+      <div class="why">
+        <div><h3>Price before work</h3><p>We agree the quote by phone or message. Nothing starts without it.</p></div>
+        <div><h3>We show you the old parts</h3><p>See what we replaced, and take the parts with you if you like.</p></div>
+        <div><h3>12-month warranty</h3><p>On our labour and on parts bought from us.</p></div>
+        <div><h3>Clear timing</h3><p>We tell you when your car will be ready and warn you if that changes.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="promo">
+    <div class="wrap">
+      <p>Book a service this month and get a free suspension check.</p>
+      <a class="btn btn-dark" href="#contact">Book a service</a>
+    </div>
+  </section>
+
+  <section class="sec" id="reviews">
+    <div class="wrap">
+      <h2>What customers say</h2>
+      <!-- For a real client, replace with genuine Google reviews -->
+      <div class="reviews">
+        <blockquote><p>They quoted me on the phone and the final bill was exactly the same. The car was ready a day early.</p><footer>Andrew, Skoda Octavia</footer></blockquote>
+        <blockquote><p>They showed me the worn brake pads and explained why they needed changing now. No pushy upselling.</p><footer>Maria, Toyota Yaris</footer></blockquote>
+        <blockquote><p>Third year coming here for servicing. They always find a convenient time and I never wait in a queue.</p><footer>Igor, VW Passat</footer></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec alt" id="contact">
+    <div class="wrap contact">
+      <div>
+        <h2>Book a visit</h2>
+        <p>12 Example Street<br>Mon–Sat, 8:00–19:00<br>Sunday: closed</p>
+        <p><a class="phone" href="tel:+000000000000">+000 000 000 000</a></p>
+        <!-- For a real client, paste the Google Maps iframe here -->
+        <div class="map" role="img" aria-label="Map placeholder">Map</div>
+      </div>
+      <form id="lead" novalidate>
+        <label>Name<input name="name" autocomplete="name" required></label>
+        <label>Phone<input name="phone" type="tel" autocomplete="tel" required></label>
+        <label>Car make and model<input name="car"></label>
+        <label>What’s the problem?<textarea name="message" rows="3"></textarea></label>
+        <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn-red" type="submit">Send request</button>
+        <p id="note" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="foot"><div class="wrap">© Pitlane. Demo website concept.</div></footer>
+<a class="callbar" href="tel:+000000000000">Call us</a>
+
+<script src="script.js"></script>
+</body>
+</html>
