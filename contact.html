@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact and booking | Pitlane</title>
+<meta name="description" content="Book a visit by phone or online. Open Mon–Sat, 8:00–19:00.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="logo" href="index.html">Pitlane</a>
+    <nav aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Our work</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+    <a class="btn btn-red" href="tel:+000000000000">+000 000 000 000</a>
+  </div>
+</header>
+
+<main>
+  <section class="page-head">
+    <div class="wrap">
+      <h1>Book a visit</h1>
+      <p>Call us or send a request. We reply within the hour during opening times.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap contact">
+      <div>
+        <h2>Find us</h2>
+        <p>12 Example Street<br>Mon–Sat, 8:00–19:00<br>Sunday: closed</p>
+        <p><a class="phone" href="tel:+000000000000">+000 000 000 000</a></p>
+        <!-- For a real client, paste the Google Maps iframe here -->
+        <div class="map" role="img" aria-label="Map placeholder">Map</div>
+      </div>
+      <form id="lead" novalidate>
+        <label>Name<input name="name" autocomplete="name" required></label>
+        <label>Phone<input name="phone" type="tel" autocomplete="tel" required></label>
+        <label>Car make and model<input name="car"></label>
+        <label>What’s the problem?<textarea name="message" rows="3"></textarea></label>
+        <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn-red" type="submit">Send request</button>
+        <p id="note" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="foot"><div class="wrap">© Pitlane. Demo website concept.</div></footer>
+<a class="callbar" href="tel:+000000000000">Call us</a>
+<script src="script.js"></script>
+</body>
+</html>
